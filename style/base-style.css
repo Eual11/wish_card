@@ -1,0 +1,290 @@
+ @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Playfair+Display:wght@400;500&family=Press+Start+2P&family=Raleway&family=Roboto&display=swap');
+ :root
+{
+    --bgcol:#080707;
+    --g1:linear-gradient( 90.6deg,  rgba(1,173,238,1) 10.8%, rgba(234,48,140,1) 48.5%, rgba(243,233,22,1) 84% );
+    --g2:linear-gradient(to right, purple, violet, pink, purple );
+    --stagger1:50ms;
+
+}
+@keyframes up-and-down {
+    from{
+        transform: translateY(-13px);
+    }
+    to 
+    {
+        transform: translateY(10px);
+    }
+}
+
+ @keyframes background-pan {
+    from 
+    {
+        background-position: 200% center;
+    }
+    to 
+    {
+         background-position: 0% center;
+    }
+    
+ }
+
+ body{
+    background-color: var(--bgcol);
+    color: white;
+    width: 100vw;
+    margin: 0;
+    font-family: "Raleway";
+}
+.img_head
+{
+ width: 100%;
+ overflow: hidden;
+ height: 100vh;
+ background: url("../img/\(2\).jpg");
+ background-repeat: no-repeat;
+ background-position: top;
+ background-size: 100% auto;  
+ display: flex;
+ justify-content: center;
+ align-items:center;
+}
+#wish
+{
+    font-family: "Monoton";
+    font-size: 6vw;
+    background: linear-gradient( to right,  rgba(1,173,238,1) 10.8%, rgba(234,48,140,1)98.5%, rgba(243,233,22,1) 14% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+    background-position: center;
+    background-size: 200%; 
+    animation: background-pan 4s linear infinite;
+    margin-bottom: 20px;
+    transition: all 3s;
+  color: white;
+  font: 700 normal 5.0em 'tahoma';
+  /* //text-shadow: 5px 2px #6b6d6e, 2px 4px #6d6f71, 3px 5px #6e6e6e; */
+
+}
+#wish
+{
+    /* background: none; */
+    /* color: white; */
+  font: 700 normal 5.0em 'tahoma';
+  /* text-shadow: 5px 2px #2c2a2a, 2px 4px #202020, 3px 5px #808080;  */
+
+}
+#downbtn
+{
+   position: absolute;
+   top: 80%;
+   font-size: 3em;
+   animation: up-and-down 0.4s linear infinite alternate;
+   border-radius: 50%;
+   
+
+}
+.hidden
+{
+    filter: blur(10px);
+    transform:translateX(-100%);
+    transition: all 2s;
+   
+}
+.show
+{
+   filter: opacity(1);
+   transform: translateX(0);
+    transition: all 2s;
+}
+#images
+{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+#images img{
+    padding-right: 10px;
+    border-radius: 25px;
+
+    
+}
+/********************************************** STAGGERING SECTION**********************************************************************************/
+
+#images > img:nth-child(4)
+{
+    
+    transition-delay: calc(3*var(--stagger1));
+}
+#images > img:nth-child(3)
+{
+    transition-delay: calc(2*var(--stagger1));
+}
+#images > img:nth-child(2)
+{
+    transition-delay: calc(1*var(--stagger1));
+}
+#images > img:nth-child(1)
+{
+    transition-delay: calc(0*var(--stagger1));
+}
+#make_a_wish
+{
+    background-color: var(--bgcol);
+    width: 70%;
+    height: 10px;
+    padding: 10px 0;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10%;
+    color: white;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+#make_a_wish:focus
+{
+    border: 1px solid #080707;
+}
+#wish_div
+{
+    justify-content: flex-start;
+}
+input[type="button"]
+{
+    background-color: white;
+    border-radius: 8px;
+    width: 100px;
+    height: 28px;
+    border: none;
+    font-size: 20px;
+    color: #080707;
+    margin-left: 10px;
+}
+@keyframes rotate
+{
+    from 
+    {
+        transform: rotate(0);   
+        border: 2px solid #3ff9dc;
+    border-right: 3px solid #3ff9dd6c;
+    border-bottom: 3px solid #3ff9dd31;
+    border-left: 3px solid #3ff9dd00;
+    }
+    to 
+    {
+        transform: rotate(359deg);
+        border: 2px solid #f95e3f;
+    border-right: 3px solid #f95e3f6c;
+    border-bottom: 3px solid #f95e3f31;
+    border-left: 3px solid #3ff9dd00;
+    }
+}
+#loader
+{
+    width:60px ;
+    height: 70px;
+    border: 2px solid #3ff9dc;
+    border-right: 3px solid #3ff9dd6c;
+    border-bottom: 3px solid #3ff9dd31;
+    border-left: 3px solid #3ff9dd00;
+    border-radius: 50%;
+    animation: rotate 0.5s linear 0s infinite ;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+@media screen and (max-width:400px) {
+    body {
+        overflow: scroll;
+    }
+    #wish
+    {
+        font-size: 30px !important;
+        margin-top: 40px;
+        align-self: center;
+    }
+    .img_head
+{
+ height: 50vh;
+ background-position: top;
+ background-size: 100% 100vh; 
+ justify-content: center;
+ align-items:center;
+}
+.bubble{
+    color: white;
+    margin-bottom: 5px !important;
+    font-size: 10px !important;
+  }
+  #chat_header
+  {
+    font-size:16px ;
+  }
+  h1
+  {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  h2
+  {
+    font-size: 23px !important;
+    /* lZZZ: 30px !important; */
+  }
+  
+  body > section.pink > div > div >p
+  {
+    font-size: 13px;
+    font-style: italic;
+  }
+  input[type="button"]
+{
+    background-color: white;
+    border-radius: 8px;
+    width: 100px;
+    height: 28px;
+    border: none;
+    font-size: 20px;
+    color: #080707;
+    margin-top: 10px;
+    margin-left: 30%;
+    
+}
+body > section.red > div:nth-child(1)
+{
+   
+
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+img
+{
+    width: 100px;
+    height: 100px;
+}
+#images
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+body > section.blue > div > h1
+{
+    font-size: 30px !important;
+}
+body > section.blue > div > p
+{
+    font-size: 1em !important;
+
+}
+#wish_div > div > h1
+{
+    font-size: 25px !important;
+}
+    
+}

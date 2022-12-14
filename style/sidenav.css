@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Playfair+Display:wght@400;500&family=Press+Start+2P&family=Roboto&display=swap');
+:root
+{
+    --lightbg: #eee;
+    --lightnavbg: #202020;
+}
+body{
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--lightbg);
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+.header
+{
+    width: 100%;
+    height: 70px;
+}
+#sidenav
+{
+    width: 0px;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 2;
+    position: fixed;
+    background-color: var(--lightnavbg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 55px;
+    margin-top:10px ;
+    transition: all 1s;
+}
+#sidenav>a{
+    text-decoration: none;
+    color: #eee;
+    height: 5%;
+    font-size: 22px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    width: 75%;
+    
+
+
+}
+.topnav
+{
+    margin-top: 10px;
+    /* box-shadow: 2px 3px 2px #202020; */
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--lightnavbg);
+    padding-left: 4%;
+    z-index: 1;
+    position: fixed;
+
+}
+#menu_icon
+{
+    text-decoration: none;
+    color: #eee;
+    font-size: 22px;
+}
+#close
+{
+    position: absolute;
+    left: 75%;
+}

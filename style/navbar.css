@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&family=Roboto&display=swap'); 
+
+body{
+    background-color: rgb(240, 240, 240);
+    font-family:'Roboto';
+    margin: 0;
+}
+.topnav
+{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #202020;
+    height: 6vh;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 1px;
+    width: 100%;
+
+}
+.topnav>a{
+    text-decoration: none;
+    color: white;
+}
+.topnav:visited
+{
+    text-decoration: none;
+}
+.topnav>a:hover
+{
+    color:rgb(5, 214, 241);
+}
+@media  (max-width:480px) {
+    .topnav>a:not(:first-child)
+    {
+        display: none;
+    }
+    .topnav
+    {
+        justify-content:space-around;
+        gap: 50%;
+    }
+    #mbhamicon
+    {
+        display: block !important;
+        
+    }
+    #mbhamicon:hover
+    {
+        color: rgb(5,214,241);
+    }
+    
+    .responsive
+{
+    display: block;
+    flex-direction: column;
+}
+.responsive>a:not(#mbhamicon)
+{
+    display: block !important;
+    height: 40px;
+    width: 100%;
+    background-color: #202020;
+    border: 1px solid #202020;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: content-box;
+    transition: all 0.2s linear ;
+
+}
+.responsive #mbhamicon
+{
+    position: absolute;
+    float: right !important;
+    top: 29px !important;
+    left: 90%;
+}
+
+}
